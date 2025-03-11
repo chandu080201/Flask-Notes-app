@@ -1,0 +1,97 @@
+:root {
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bs-dark-bg-subtle);
+    min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    transition: transform var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* Note Card Styles */
+.note-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.note-card .btn-danger {
+    transition: opacity var(--transition-speed);
+    opacity: 0;
+}
+
+.note-card:hover .btn-danger {
+    opacity: 1;
+}
+
+/* Form Styles */
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,0.15);
+}
+
+.form-floating label {
+    color: var(--bs-gray-600);
+}
+
+/* Button Styles */
+.btn {
+    transition: all var(--transition-speed);
+}
+
+.btn-primary {
+    padding: 0.5rem 1.5rem;
+}
+
+/* Animation Classes */
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.animate-fade-out {
+    animation: fadeOut 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(20px); }
+}
+
+/* Toast Notifications */
+.toast {
+    opacity: 1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
